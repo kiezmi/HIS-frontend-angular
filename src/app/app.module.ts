@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './routing/routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +10,7 @@ import { PacienteComponent } from './paciente/paciente.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { HistorialComponent } from './historial/historial.component';
 import { HistorialesComponent } from './historiales/historiales.component';
-import{StateManagerService} from './state-manager.service'
+import { StateManagerService } from './state-manager.service'
 
 
 @NgModule({
@@ -26,7 +25,6 @@ import{StateManagerService} from './state-manager.service'
     HistorialesComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule, ReactiveFormsModule,
