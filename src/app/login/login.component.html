@@ -1,3 +1,6 @@
-<input type="Usuario" placeholder="Usuario" [(ngmodel)]="user">
+<p>Introduzca su Usuario y Contraseña</p>
+
+<input type="Usuario" placeholder="Usuario" [(ngModel)]="user">
 <input type="password" placeholder="Contraseña" [(ngModel)]="pass">
-<button click(logear)></button>
+<button  (click)="login()">Login</button>
+

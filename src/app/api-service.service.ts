@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { StateManagerService } from './state-manager.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,12 @@ export class ApiServiceService {
     { role: 'technical', uid: "001", name: "Javi", surname: "Guerra", dni: "123456789N" }
   ];
 
-  constructor() { }
-
+  constructor(private stateManager: StateManagerService) { }
+  login(user, pass) {
+    // logic
+    return true
+  }
 }
+
 
 

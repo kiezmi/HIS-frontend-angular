@@ -11,6 +11,7 @@ import { PacientesComponent } from './pacientes/pacientes.component';
 import { HistorialComponent } from './historial/historial.component';
 import { HistorialesComponent } from './historiales/historiales.component';
 import { StateManagerService } from './state-manager.service'
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -26,8 +27,8 @@ import { StateManagerService } from './state-manager.service'
   ],
   imports: [
     AppRoutingModule,
-    HttpClientModule,
-    FormsModule, ReactiveFormsModule,
+    BrowserModule,
+    FormsModule,
   ],
   providers: [StateManagerService],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServiceService } from '../api-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  user: string;
+  pass: string;
+  logging: boolean = false;
+  error = false;
 
-  ngOnInit() {
+  login(): void {
+    let result = this.api.login(this.user, this.pass)
+    this.router.navigate(['dashboard'])
   }
+
+  constructor(private api: ApiServiceService, private router: Router) { }
+
+  ngOnInit() { }
 
 }
