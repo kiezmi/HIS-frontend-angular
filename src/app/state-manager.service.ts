@@ -5,14 +5,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class StateManagerService {
- state: {
-   auth: null,
- }
+  state = {
+    auth: null,
+  }
   constructor() { }
-  login(user){
+  login(user) {
     this.state.auth = user
   }
+
+  
   isLogged() {
+
     return this.state.auth && this.state.auth.role
   }
 

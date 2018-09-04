@@ -15,8 +15,10 @@ export class LoginComponent implements OnInit {
   error = false;
 
   login(): void {
-    let result = this.api.login(this.user, this.pass)
-    this.router.navigate(['dashboard'])
+    let result = this.api.login(this.user, this.pass);
+console.log(result);
+
+    this.router.navigate(['dashboard']);
   }
 
   constructor(private api: ApiServiceService, private router: Router) { }

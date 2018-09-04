@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StateManagerService } from '../state-manager.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private stateManager: StateManagerService) { }
 
+
+  
   ngOnInit() {
   }
 
