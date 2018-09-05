@@ -11,17 +11,25 @@ export class LoginComponent implements OnInit {
 
   user: string;
   pass: string;
-  logging: boolean = false;
-  error = false;
-
-  login(): void {
-    let result = this.api.login(this.user, this.pass);
-console.log(result);
-
-    this.router.navigate(['dashboard']);
-  }
+  error = "";
 
   constructor(private api: ApiServiceService, private router: Router) { }
+
+  login(): void {
+
+    if (this.api.login(this.user, this.pass)) {
+      this.user = "";
+      this.pass = "";
+      this.error = "";
+      this.router.navigate(['dashboard']);
+    } else {
+      this.error = ("Introduzca su usuario y contraseña correctamente");
+      this.router.navigate(['login']);
+    }
+
+  }
+
+
 
   ngOnInit() { }
 

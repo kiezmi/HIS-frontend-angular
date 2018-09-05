@@ -11,7 +11,7 @@ import { HistorialComponent } from './historial/historial.component';
 import { HistorialesComponent } from './historiales/historiales.component';
 import { StateManagerService } from './state-manager.service'
 import { BrowserModule } from '@angular/platform-browser';
-
+import { AuthGuard } from './guards/guard.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,10 @@ import { BrowserModule } from '@angular/platform-browser';
     BrowserModule,
     FormsModule,
   ],
-  providers: [StateManagerService],
+  providers: [
+    StateManagerService,
+    AuthGuard,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

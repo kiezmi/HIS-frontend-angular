@@ -1,6 +1,7 @@
-<p>Introduzca su Usuario y Contraseña</p>
-
-<input type="Usuario" placeholder="Usuario" [(ngModel)]="user">
-<input type="password" placeholder="Contraseña" [(ngModel)]="pass">
-<button  (click)="login()">Login</button>
-
+<p>Introduzca su Usuario y Contraseña</p><br>
+<form (submit)="login()">
+  <input type="text" name="user" placeholder="Usuario" [(ngModel)]="user">
+  <input type="password" name="pass" placeholder="Contraseña" [(ngModel)]="pass">
+  <button type="submit">Login</button>
+  <div *ngIf="error">{{error}}</div>
+</form>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StateManagerService } from '../state-manager.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,10 +9,11 @@ import { StateManagerService } from '../state-manager.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private stateManager: StateManagerService) { }
-
-
-  
+  constructor(private stateManager: StateManagerService, private router: Router) { }
+  logout() {
+    this.stateManager.logout();
+    this.router.navigate(['login']);
+  }
   ngOnInit() {
   }
 
