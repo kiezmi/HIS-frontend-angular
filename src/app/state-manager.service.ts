@@ -22,5 +22,6 @@ export class StateManagerService {
     this.state.auth = null;
   }
 
+  
 }
 

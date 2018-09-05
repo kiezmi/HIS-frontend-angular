@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { LoginComponent } from '../login/login.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-import { PacienteComponent } from '../paciente/paciente.component';
 import { AuthGuard } from '../guards/guard.service';
 import { AllGuard } from '../guards/all.guard';
 
@@ -26,21 +25,24 @@ const routes: Routes = [
     },
     {
         path: 'paciente/:id',
-        component: PacienteComponent,
+        component: DashboardComponent,
         canActivate: [AuthGuard, AllGuard],
     },
-    /*  {
+     {
          path: 'medico/:id',
-         component: MedicoComponent,
+         component: DashboardComponent,
+         canActivate: [AuthGuard, AllGuard],
      },
      {
          path: 'tecnico/:id',
-         component: TecnicoComponent,
+         component: DashboardComponent,
+         canActivate: [AuthGuard, AllGuard],
      },
      {
-         path: 'admin/:id',
-         component: AdminComponent,
-     }, */
+         path: 'admin/',
+         component: DashboardComponent,
+         canActivate: [AuthGuard, AllGuard],
+     }, 
     {
         path: '**',
         component: NotFoundComponent
