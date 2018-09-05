@@ -6,6 +6,7 @@ import { LoginComponent } from '../login/login.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { PacienteComponent } from '../paciente/paciente.component';
 import { AuthGuard } from '../guards/guard.service';
+import { AllGuard } from '../guards/all.guard';
 
 const routes: Routes = [
     {
@@ -16,7 +17,7 @@ const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent,
-    
+
     },
     {
         path: 'dashboard',
@@ -26,7 +27,7 @@ const routes: Routes = [
     {
         path: 'paciente/:id',
         component: PacienteComponent,
-        canActivate: [AuthGuard],
+        canActivate: [AuthGuard, AllGuard],
     },
     /*  {
          path: 'medico/:id',

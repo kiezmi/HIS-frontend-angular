@@ -18,13 +18,15 @@ export class ApiServiceService {
   login(user, pass) {
     // logic
     const userObject = this.users.find(validar => validar.username === user && validar.password === pass)
-    
+
     if (userObject) {
       this.stateManager.login(userObject)
     }
-    //console.log(userObject);
+    console.log(userObject);
     return userObject;
   }
+
+  
 }
 
 
