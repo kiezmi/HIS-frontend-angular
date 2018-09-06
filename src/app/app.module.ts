@@ -13,6 +13,8 @@ import { StateManagerService } from './state-manager.service'
 import { BrowserModule } from '@angular/platform-browser';
 import { AuthGuard } from './guards/guard.service';
 import { AllGuard } from './guards/all.guard';
+import { PatientsComponent } from './patients/patients.component';
+import { PatientComponent } from './patient/patient.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AllGuard } from './guards/all.guard';
     PacienteComponent,
     PacientesComponent,
     HistorialComponent,
-    HistorialesComponent
+    HistorialesComponent,
+    PatientsComponent,
+    PatientComponent
   ],
   imports: [
     AppRoutingModule,

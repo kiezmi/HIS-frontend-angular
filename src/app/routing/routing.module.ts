@@ -6,6 +6,8 @@ import { LoginComponent } from '../login/login.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { AuthGuard } from '../guards/guard.service';
 import { AllGuard } from '../guards/all.guard';
+import {PatientsComponent} from '../patients/patients.component';
+import {PatientComponent} from '../patient/patient.component';
 
 const routes: Routes = [
     {
@@ -24,49 +26,14 @@ const routes: Routes = [
         canActivate: [AuthGuard],
     },
     {
-        path: 'paciente/:id',
-        component: DashboardComponent,
-        canActivate: [AuthGuard],
+        path: 'patients',
+        component: PatientsComponent,
+        canActivate: [AllGuard],
     },
     {
-        path: 'pacientes',
-        component: DashboardComponent,
-        canActivate: [AuthGuard],
-    },
-    {
-        path: 'medico/:id',
-        component: DashboardComponent,
-        canActivate: [AuthGuard],
-    },
-    {
-        path: 'medicos',
-        component: DashboardComponent,
-        canActivate: [AuthGuard],
-    },
-    {
-        path: 'tecnico/:id',
-        component: DashboardComponent,
-        canActivate: [AuthGuard, AllGuard],
-    },
-    {
-        path: 'tecnicos',
-        component: DashboardComponent,
-        canActivate: [AuthGuard, AllGuard],
-    },
-    {
-        path: 'historial/:id',
-        component: DashboardComponent,
-        canActivate: [AuthGuard, AllGuard],
-    },
-    {
-        path: 'historiales',
-        component: DashboardComponent,
-        canActivate: [AuthGuard, AllGuard],
-    },
-    {
-        path: 'admin/',
-        component: DashboardComponent,
-        canActivate: [AuthGuard, AllGuard],
+        path: 'patient/:id',
+        component: PatientComponent,
+        canActivate: [AllGuard],
     },
     {
         path: '**',
