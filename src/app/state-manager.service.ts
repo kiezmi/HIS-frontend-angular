@@ -13,7 +13,7 @@ export class StateManagerService {
   login(user) {
     this.state.auth = {
       role: user.role,
-      uid: user.uid
+      uide: user.uid,
     }
     //this.state.auth = user;   /* usuario completo */
   }
@@ -29,8 +29,8 @@ export class StateManagerService {
     return this.state.auth.role;
   }
 
-  getUid(){
-    return this.state.auth.uid;
+  getUide(){
+    return this.state.auth.uide;
   }
 }
 

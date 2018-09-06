@@ -1,24 +1,20 @@
 <p>
   Su rol es {{miRole}}, por lo tanto puede acceder a:
 </p>
-<button *ngIf="miRole==='admin'">Ficha</button><br>
-
-
 
 <div>
-  
+  <button *ngIf="miRole==='admin'|| miRole==='patient'">Ficha</button><br>
+  <button *ngIf="miRole==='admin'|| miRole==='doctor'" routerLink="/patients">Paciente</button><br>
+  <button *ngIf="miRole==='admin'|| miRole==='doctor'">Historial Clinico</button><br>
+  <button *ngIf="miRole==='admin' || miRole==='technical'">Crear Paciente</button><br>
+  <button *ngIf="miRole==='admin' || miRole==='technical'">Crear Medico</button><br>
+  <button *ngIf="miRole==='admin' || miRole==='technical'">Crear tecnico</button><br>
+</div>
 
-  
-  <button  *ngIf="miRole==='admin'">Pacientes</button><a routelink="/patients"></a>
-  <button routelink="/patient/{{miUid}}" *ngIf="miRole==='patient'">tu ficha</button>
-  <button *ngIf="miRole==='admin'|| miRole==='doctor'" routelink="/patients">Historial</button>
-  <button *ngIf="miRole==='admin'">Paciente</button>
-  <button *ngIf="miRole==='admin'"></button>
-  <button *ngIf="miRole==='admin'">Historial Clinico</button>
-  <button *ngIf="miRole==='admin'"></button>
-  <button *ngIf="miRole==='admin' || miRole==='technical'">Crear Paciente</button>
-  <button *ngIf="miRole==='admin' || miRole==='technical'">Crear Medico</button>
-  <button *ngIf="miRole==='admin' || miRole==='technical'">Crear tecnico</button>
+<div>
+  <!-- <a routerLink="/ruta">NombreDescriptivo</a>
+  [routerLink]="['/curso', curso.id]"
+ -->
 </div>
 
 

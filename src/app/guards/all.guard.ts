@@ -11,9 +11,9 @@ export class AllGuard implements CanActivate {
   canActivate(next: ActivatedRouteSnapshot) {
 
     var roll = this.stateManager.getRole();
-    var uid = this.stateManager.getUid();
+    var uid = this.stateManager.getUide();
     var route = next.routeConfig.path;
-console.log(next.params.id);
+    
     switch (roll) {
       case 'admin':
         return true;
@@ -24,25 +24,24 @@ console.log(next.params.id);
         } else {
           return false;
         }
-        
+
       case 'doctor':
         if (route === 'patients' || route === 'patient/:id' || route === 'histories' || route === 'history/:id') {
           return true;
         } else {
           return false;
         }
-        
+
       case 'patient':
         if ((route === 'patient/:id' && uid === next.params.id) || (route === 'history/:id' && uid === next.params.id)) {
           return true;
         } else {
           return false;
         }
-       
 
       default:
         return false;
-        
+
     }
 
   }

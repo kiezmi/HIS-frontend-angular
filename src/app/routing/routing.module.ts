@@ -10,6 +10,7 @@ import { PatientsComponent } from '../patients/patients.component';
 import { PatientComponent } from '../patient/patient.component';
 import { HistoriesComponent } from '../histories/histories.component';
 import { HistoryComponent } from '../history/history.component';
+import { CreateUserComponent } from '../create-user/create-user.component';
 
 const routes: Routes = [
     {
@@ -45,6 +46,11 @@ const routes: Routes = [
     {
         path: 'history/:id',
         component: HistoryComponent,
+        canActivate: [AllGuard],
+    },
+    {
+        path: 'createUser',
+        component: CreateUserComponent,
         canActivate: [AllGuard],
     },
     {
