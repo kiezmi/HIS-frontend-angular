@@ -3,19 +3,11 @@
 </p>
 
 <div>
-  <button *ngIf="miRole==='admin'|| miRole==='patient'">Ficha</button><br>
-  <button *ngIf="miRole==='admin'|| miRole==='doctor'" routerLink="/patients">Paciente</button><br>
-  <button *ngIf="miRole==='admin'|| miRole==='doctor'">Historial Clinico</button><br>
-  <button *ngIf="miRole==='admin' || miRole==='technical'">Crear Paciente</button><br>
-  <button *ngIf="miRole==='admin' || miRole==='technical'">Crear Medico</button><br>
-  <button *ngIf="miRole==='admin' || miRole==='technical'">Crear tecnico</button><br>
+  <button *ngIf="miRole==='admin'|| miRole==='doctor'" routerLink="/histories">Lista Historiales</button><br>
+  <button *ngIf="miRole==='admin'|| miRole==='doctor'" routerLink="/patients">Lista Pacientes</button><br>
+  <button *ngIf="miRole==='admin' || miRole==='technical'" routerLink="/createUser">Nuevo Usuario</button><br>
+  <button *ngIf="miRole==='patient'" routerLink="/patient/:{{miUid}}">Ficha</button><br>
+  <button *ngIf="miRole==='patient'" routerLink="/history/:{{miUid}}">Historial Clinico</button><br>
 </div>
-
-<div>
-  <!-- <a routerLink="/ruta">NombreDescriptivo</a>
-  [routerLink]="['/curso', curso.id]"
- -->
-</div>
-
 
 <button (click)="logout()">Desconectarse</button>

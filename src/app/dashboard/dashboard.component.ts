@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
 
   miRole: string;
-  miUide: string;
+  miUid: string;
   constructor(private stateManager: StateManagerService, private router: Router) { }
 
   logout() {
@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     console.log(this.stateManager);
     this.miRole = this.stateManager.getRole();
-    this.miUide = this.stateManager.getUide();
+    this.miUid = this.stateManager.getUid();
   }
 
 }

@@ -34,7 +34,7 @@ const routes: Routes = [
         canActivate: [AllGuard],
     },
     {
-        path: 'patient/:id',
+        path: 'patient/:uid',
         component: PatientComponent,
         canActivate: [AllGuard],
     },
@@ -44,7 +44,7 @@ const routes: Routes = [
         canActivate: [AllGuard],
     },
     {
-        path: 'history/:id',
+        path: 'history/:uid',
         component: HistoryComponent,
         canActivate: [AllGuard],
     },
