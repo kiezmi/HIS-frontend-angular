@@ -12,6 +12,7 @@ import { HistorialesComponent } from './historiales/historiales.component';
 import { StateManagerService } from './state-manager.service'
 import { BrowserModule } from '@angular/platform-browser';
 import { AuthGuard } from './guards/guard.service';
+import { AllGuard } from './guards/all.guard';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AuthGuard } from './guards/guard.service';
   providers: [
     StateManagerService,
     AuthGuard,
+    AllGuard
   ],
   bootstrap: [AppComponent]
 })

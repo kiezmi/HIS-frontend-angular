@@ -1,16 +1,17 @@
-
-<div *ngIf="patient"></div>
-<div *ngIf="doctor"></div>
-<div *ngIf="technical"></div>
-<div *ngIf="admin"></div>
-
-
-
-
-
-
 <p>
-  dashboard works!
-  <button (click)="logout()" >Desconectarse</button>
+  Su rol es {{miRole}}, por lo tanto puede acceder a:
 </p>
+<button (click)="logout()">Desconectarse</button>
 
+
+<!--  <div>
+  <button *ngIF="miRole===admin" >Ficha</button>
+  <button *ngIF="miRole===admin" >Historial</button>
+  <button *ngIF="miRole===admin" >Paciente</button>
+  <button *ngIF="miRole===admin" >cita</button>
+  <button *ngIF="miRole===admin" >Historial Clinico</button>
+  <button *ngIF="miRole===admin" >Crear Historial</button>
+  <button *ngIF="miRole===admin" || *ngIF="miRole===technical" >Crear Paciente</button>
+  <button *ngIF="miRole===admin" || *ngIF="miRole===technical" >Crear Medico</button>
+  <button *ngIF="miRole===admin" || *ngIF="miRole===technical" >Crear tecnico</button>
+ </div> -->

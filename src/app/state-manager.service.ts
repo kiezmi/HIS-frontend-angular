@@ -11,17 +11,23 @@ export class StateManagerService {
   constructor() { }
 
   login(user) {
-    this.state.auth = { role: user.role}
+    this.state.auth = {
+      role: user.role,
+      uide: user.uide
+    }
     //this.state.auth = user;   /* usuario completo */
   }
 
   isLogged() {
-    return this.state.auth && this.state.auth.role
+    return this.state.auth
   }
   logout() {
     this.state.auth = null;
   }
 
-  
+  getRole(){
+    return this.state.auth.role;
+  }
+
 }
 

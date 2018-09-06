@@ -26,23 +26,48 @@ const routes: Routes = [
     {
         path: 'paciente/:id',
         component: DashboardComponent,
+        canActivate: [AuthGuard],
+    },
+    {
+        path: 'pacientes',
+        component: DashboardComponent,
+        canActivate: [AuthGuard],
+    },
+    {
+        path: 'medico/:id',
+        component: DashboardComponent,
+        canActivate: [AuthGuard],
+    },
+    {
+        path: 'medicos',
+        component: DashboardComponent,
+        canActivate: [AuthGuard],
+    },
+    {
+        path: 'tecnico/:id',
+        component: DashboardComponent,
         canActivate: [AuthGuard, AllGuard],
     },
-     {
-         path: 'medico/:id',
-         component: DashboardComponent,
-         canActivate: [AuthGuard, AllGuard],
-     },
-     {
-         path: 'tecnico/:id',
-         component: DashboardComponent,
-         canActivate: [AuthGuard, AllGuard],
-     },
-     {
-         path: 'admin/',
-         component: DashboardComponent,
-         canActivate: [AuthGuard, AllGuard],
-     }, 
+    {
+        path: 'tecnicos',
+        component: DashboardComponent,
+        canActivate: [AuthGuard, AllGuard],
+    },
+    {
+        path: 'historial/:id',
+        component: DashboardComponent,
+        canActivate: [AuthGuard, AllGuard],
+    },
+    {
+        path: 'historiales',
+        component: DashboardComponent,
+        canActivate: [AuthGuard, AllGuard],
+    },
+    {
+        path: 'admin/',
+        component: DashboardComponent,
+        canActivate: [AuthGuard, AllGuard],
+    },
     {
         path: '**',
         component: NotFoundComponent

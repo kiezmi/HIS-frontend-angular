@@ -9,13 +9,17 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
+  miRole: string;
+
   constructor(private stateManager: StateManagerService, private router: Router) { }
 
   logout() {
     this.stateManager.logout();
     this.router.navigate(['login']);
   }
+
   ngOnInit() {
+    this.miRole= this.stateManager.getRole();
   }
 
 }

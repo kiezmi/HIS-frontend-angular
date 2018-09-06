@@ -10,16 +10,23 @@ export class AllGuard implements CanActivate {
 
   canActivate(next: ActivatedRouteSnapshot) {
 
-    var rol = this.stateManager.state.auth.role;
+    var roll = this.stateManager.getRole();
+    var route = next.routeConfig.path;
 
-    switch (next.routeConfig.path) {
-      case 'patients/:id':
+    switch (roll) {
+      case 'admin':
+        return true;
 
-        break;
+      case 'doctor':
+        if (route === 'dashboard') {
+          return true;
+        } else {
+          return false;
+        }
 
       default:
         break;
     }
-    return true;
+
   }
 }
