@@ -6,8 +6,10 @@ import { LoginComponent } from '../login/login.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { AuthGuard } from '../guards/guard.service';
 import { AllGuard } from '../guards/all.guard';
-import {PatientsComponent} from '../patients/patients.component';
-import {PatientComponent} from '../patient/patient.component';
+import { PatientsComponent } from '../patients/patients.component';
+import { PatientComponent } from '../patient/patient.component';
+import { HistoriesComponent } from '../histories/histories.component';
+import { HistoryComponent } from '../history/history.component';
 
 const routes: Routes = [
     {
@@ -33,6 +35,16 @@ const routes: Routes = [
     {
         path: 'patient/:id',
         component: PatientComponent,
+        canActivate: [AllGuard],
+    },
+    {
+        path: 'histories',
+        component: HistoriesComponent,
+        canActivate: [AllGuard],
+    },
+    {
+        path: 'history/:id',
+        component: HistoryComponent,
         canActivate: [AllGuard],
     },
     {

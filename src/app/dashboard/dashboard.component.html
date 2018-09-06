@@ -6,8 +6,10 @@
 
 
 <div>
-  <a ></a>
-  <button routelink="/patients" *ngIf="miRole==='admin'">Pacientes</button>
+  
+
+  
+  <button  *ngIf="miRole==='admin'">Pacientes</button><a routelink="/patients"></a>
   <button routelink="/patient/{{miUid}}" *ngIf="miRole==='patient'">tu ficha</button>
   <button *ngIf="miRole==='admin'|| miRole==='doctor'" routelink="/patients">Historial</button>
   <button *ngIf="miRole==='admin'">Paciente</button>

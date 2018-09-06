@@ -13,7 +13,7 @@ export class AllGuard implements CanActivate {
     var roll = this.stateManager.getRole();
     var uid = this.stateManager.getUid();
     var route = next.routeConfig.path;
-
+console.log(next.params.id);
     switch (roll) {
       case 'admin':
         return true;

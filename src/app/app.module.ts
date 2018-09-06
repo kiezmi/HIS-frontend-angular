@@ -5,16 +5,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { PacienteComponent } from './paciente/paciente.component';
-import { PacientesComponent } from './pacientes/pacientes.component';
-import { HistorialComponent } from './historial/historial.component';
-import { HistorialesComponent } from './historiales/historiales.component';
 import { StateManagerService } from './state-manager.service'
 import { BrowserModule } from '@angular/platform-browser';
 import { AuthGuard } from './guards/guard.service';
 import { AllGuard } from './guards/all.guard';
 import { PatientsComponent } from './patients/patients.component';
 import { PatientComponent } from './patient/patient.component';
+import { HistoryComponent } from './history/history.component';
+import { HistoriesComponent } from './histories/histories.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +21,11 @@ import { PatientComponent } from './patient/patient.component';
     LoginComponent,
     NotFoundComponent,
     DashboardComponent,
-    PacienteComponent,
-    PacientesComponent,
-    HistorialComponent,
-    HistorialesComponent,
     PatientsComponent,
-    PatientComponent
+    PatientComponent,
+    HistoryComponent,
+    HistoriesComponent,
+    CreateUserComponent
   ],
   imports: [
     AppRoutingModule,
