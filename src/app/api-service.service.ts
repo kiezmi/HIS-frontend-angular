@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { StateManagerService } from './state-manager.service';
 import { User } from './models/user.interface'
+import { History } from './models/history.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,11 @@ export class ApiServiceService {
     { role: 'technical', uid: "001", name: "Javo", surname: "Guerra", dni: "123456789W", username: "Javo", password: "2" }
   ];
 
+  /* historiales: Array<History> = [
+    {userId: "100", doctorId: "10", log: Array<string>},
+
+  ]; */
+
   constructor(private stateManager: StateManagerService) { }
   login(user, pass) {
     // logic
@@ -31,12 +37,14 @@ export class ApiServiceService {
   }
 
   getPatients() {
-    console.log("entro en getPatientes");
-    
-    const patinentsObject = this.users.find(pacientes => pacientes.role === 'patient');
-    console.log(patinentsObject);
-    return patinentsObject;
+    const patinentsArray = this.users.filter(pacientes => pacientes.role === 'patient');
+    return patinentsArray;
   }
+/* 
+  getHistories() {
+    const historiesArray = this.users.filter(historiales => historiales);
+    return historiesArray;
+  } */
 
 }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServiceService } from '../api-service.service';
 
 @Component({
   selector: 'app-histories',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoriesComponent implements OnInit {
 
-  constructor() { }
+  histories: Array<History>;
+  constructor(private api: ApiServiceService) { 
+    // this.histories = api.gethistories();
+  }
 
   ngOnInit() {
+    
   }
 
 }

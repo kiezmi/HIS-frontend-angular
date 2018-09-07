@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StateManagerService } from '../state-manager.service';
+
 
 @Component({
   selector: 'app-patient',
@@ -10,8 +10,6 @@ export class PatientComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 
 }
