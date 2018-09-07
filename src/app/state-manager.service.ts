@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -7,6 +8,7 @@ export class StateManagerService {
   state = {
     auth: null,
   }
+  patients: Array<any>;
 
   constructor() { }
 
@@ -16,6 +18,10 @@ export class StateManagerService {
       uid: user.uid,
     }
     //this.state.auth = user;   /* usuario completo */
+  }
+  getPatient() {
+console.log("state get patientes");
+
   }
 
   isLogged() {
@@ -32,5 +38,6 @@ export class StateManagerService {
   getUid() {
     return this.state.auth.uid;
   }
+
 }
 

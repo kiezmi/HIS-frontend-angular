@@ -24,12 +24,20 @@ export class ApiServiceService {
 
     if (userObject) {
       this.stateManager.login(userObject)
+      return userObject;
     }
     console.log(userObject);
-    return userObject;
+
   }
 
-  
+  getPatients() {
+    console.log("entro en getPatientes");
+    
+    const patinentsObject = this.users.find(pacientes => pacientes.role === 'patient');
+    console.log(patinentsObject);
+    return patinentsObject;
+  }
+
 }
 
 

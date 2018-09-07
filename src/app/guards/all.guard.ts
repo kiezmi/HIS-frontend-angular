@@ -32,12 +32,12 @@ export class AllGuard implements CanActivate {
           return false;
         }
 
-     /*  case 'patient':
-        if ((route === 'patient/:uid' && uid === next.params.uid) || (route === 'history/:uid' && uid === next.params.uid)) {
+      case 'patient':
+        if (route === 'patient/:uid' || route === 'history/:uid') {
           return true;
         } else {
           return false;
-        } */
+        }
 
       default:
         return false;

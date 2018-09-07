@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    
     console.log(this.stateManager);
     this.miRole = this.stateManager.getRole();
     this.miUid = this.stateManager.getUid();
