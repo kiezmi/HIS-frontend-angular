@@ -6,8 +6,8 @@
   <button *ngIf="miRole==='admin'|| miRole==='doctor'" routerLink="/histories">Lista Historiales</button><br>
   <button *ngIf="miRole==='admin'|| miRole==='doctor'" routerLink="/patients">Lista Pacientes</button><br>
   <button *ngIf="miRole==='admin' || miRole==='technical'" routerLink="/createUser">Nuevo Usuario</button><br>
-  <button *ngIf="miRole==='patient'" routerLink="/patient/:{{miUid}}">Ficha</button><br>
-  <button *ngIf="miRole==='patient'" routerLink="/history/:{{miUid}}">Historial Clinico</button><br>
+  <button *ngIf="miRole==='patient'" routerLink="/patient/{{miUid}}">Ficha</button><br>
+  <button *ngIf="miRole==='patient'" routerLink="/history/{{miUid}}">Historial Clinico</button><br>
 </div>
 
 <button (click)="logout()">Desconectarse</button>

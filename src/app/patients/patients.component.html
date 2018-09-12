@@ -2,5 +2,6 @@
   patients works!
 </p>
 <div *ngFor="let patient of patients">
+  <a routerLink="/patient/{{miUid}}"></a>
   <pre>{{patient.name}} {{patient.surname}} {{patient.dni}} </pre>
 </div>

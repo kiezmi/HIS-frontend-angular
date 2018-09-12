@@ -1,3 +1,15 @@
 <p>
   create-user works!
 </p>
+
+<form (submit)="registro()">
+  <input type="text" name="role" placeholder="Rol" [(ngModel)]="role">
+  <input type="number" name="uid" placeholder="Uid" [(ngModel)]="uid">
+  <input type="text" name="name" placeholder="Nombre" [(ngModel)]="name">
+  <input type="text" name="surname" placeholder="Apellidos" [(ngModel)]="surname">
+  <input type="number" name="dni" placeholder="DNI" [(ngModel)]="dni">
+  <input type="text" name="username" placeholder="Usuario" [(ngModel)]="user">
+  <input type="password" name="pass" placeholder="Contraseña" [(ngModel)]="pass">
+  <button type="submit">Registrarse</button>
+  <div *ngIf="error">{{error}}</div>
+</form>
