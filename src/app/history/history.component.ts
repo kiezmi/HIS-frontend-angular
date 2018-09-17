@@ -11,17 +11,15 @@ import { ActivatedRoute } from '@angular/router';
 export class HistoryComponent implements OnInit {
   histories: Array<History>;
 
-  
+
   constructor(private api: ApiServiceService, private route: ActivatedRoute) {
     route.params.subscribe(params => {
       let id = params.uid
       this.histories = api.getHistoriesFromPatient(id);
-      
+
     });
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 
 }
