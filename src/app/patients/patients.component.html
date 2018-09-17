@@ -1,7 +1,3 @@
-<p>
-  patients works!
-</p>
-<div *ngFor="let patient of patients">
-  <a routerLink="/patient/{{miUid}}"></a>
+<div *ngFor="let patient of patients" routerLink="/patient/{{miUid}}">
   <pre>{{patient.name}} {{patient.surname}} {{patient.dni}} </pre>
 </div>

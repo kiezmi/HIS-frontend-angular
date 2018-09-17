@@ -1,4 +1,13 @@
-
 <div *ngFor="let history of histories">
-  <pre>{{history.userId}} {{history.doctorId}} {{history.log}} </pre>
+  <div *ngFor="let patient of patients">
+    <div>Paciente: {{user.getNameFromUid(uid)}}{{history.userId}}</div>
+    <div>Doctor: {{user.getNameFromUid(uid)}}{{history.doctorId}}</div>
+    <div *ngFor="let milog of log">
+      <div>Log: {{log}}</div>
+    </div>
+  </div>
 </div>
+
+<!-- 
+ <div *ngFor="let history of histories" routerLink="/history/uid">{{history.userId}}</div>
+  -->

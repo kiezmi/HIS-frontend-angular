@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
-import { History } from '../models/history.interface'
+import { History } from '../models/history.interface';
+import { User } from '../models/user.interface';
+
 
 @Component({
   selector: 'app-histories',
@@ -10,8 +12,15 @@ import { History } from '../models/history.interface'
 export class HistoriesComponent implements OnInit {
 
   histories: Array<History>;
+
   constructor(private api: ApiServiceService) {
-    this.histories = api.getHistories();
+    
+   /* this.histories = api.getHistories().map((item)=>({
+      ...item,
+      //nombrePaciente:,
+      //nombreDoctor:,
+    }));*/
+
   }
 
   ngOnInit() {

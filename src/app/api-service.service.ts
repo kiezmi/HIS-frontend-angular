@@ -22,11 +22,11 @@ export class ApiServiceService {
 
   historiales: Array<History> = [
     { userId: "100", doctorId: "10", log: ["12/2/1999 Rotura de ligamento anterior"] },
-    { userId: "100", doctorId: "20", log: ["12/2/1978 Rotura de ligamento anterior"] },
+    { userId: "100", doctorId: "20", log: ["12/2/1978 Rotura de ligamento "] },
     { userId: "200", doctorId: "20", log: ["12/2/2000 Rotura de ligamento anterior"] },
-    { userId: "200", doctorId: "10", log: ["12/2/2001 Rotura de ligamento anterior"] },
+    { userId: "200", doctorId: "10", log: ["12/2/2001 Rotura de ligamento "] },
     { userId: "300", doctorId: "30", log: ["12/2/2002 Rotura de ligamento anterior"] },
-    { userId: "300", doctorId: "10", log: ["12/2/2005 Rotura de ligamento anterior"] },
+    { userId: "300", doctorId: "10", log: ["12/2/2005 Rotura de ligamento "] },
     { userId: "300", doctorId: "20", log: ["12/2/2014 Rotura de ligamento anterior"] }
   ];
 
@@ -52,9 +52,18 @@ export class ApiServiceService {
     return patinentsArray;
   }
 
+  getDoctors(){
+    const doctorsArray = this.users.filter(doctores => doctores.role === 'doctor');
+    return doctorsArray;
+  }
+
   getHistories() {
     const historiesArray = this.historiales;
     return historiesArray;
+  }
+
+  getNameFromUid(uid){
+    return this.users.find(user => user.uid===name).name;
   }
 
 }
