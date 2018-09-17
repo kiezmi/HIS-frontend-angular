@@ -14,12 +14,13 @@ export class HistoriesComponent implements OnInit {
   histories: Array<History>;
 
   constructor(private api: ApiServiceService) {
-    
-   /* this.histories = api.getHistories().map((item)=>({
-      ...item,
-      //nombrePaciente:,
-      //nombreDoctor:,
-    }));*/
+    //this.histories = api.getHistories();
+
+    this.histories = api.getHistories().map((history) => ({
+      ...history,
+      nombrePaciente: api.getNameFromUid(history.userId),
+      nombreDoctor: api.getNameFromUid(history.doctorId),
+    }));
 
   }
 

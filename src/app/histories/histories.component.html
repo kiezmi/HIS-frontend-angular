@@ -1,4 +1,4 @@
-<div *ngFor="let history of histories">
+<!-- <div *ngFor="let history of histories">
   <div *ngFor="let patient of patients">
     <div>Paciente: {{user.getNameFromUid(uid)}}{{history.userId}}</div>
     <div>Doctor: {{user.getNameFromUid(uid)}}{{history.doctorId}}</div>
@@ -6,8 +6,27 @@
       <div>Log: {{log}}</div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- 
- <div *ngFor="let history of histories" routerLink="/history/uid">{{history.userId}}</div>
+ <div *ngFor="let history of histories" routerLink="/history/{{history.userId}}"></div>
   -->
+<!-- 
+<div *ngFor="let history of histories">
+  <div *ngFor="let patient of patients">
+    <div>Paciente: {{patient.uid}}{{history.userId}}</div>
+    <div>Doctor: {{patient.uid}}{{history.doctorId}}</div>
+    <div *ngFor="let milog of log">
+      <div>Log: {{log}}</div>
+    </div>
+  </div>
+</div> -->
+
+<div *ngFor="let history of histories" routerLink="/history/{{history.userId}}">
+  <!-- <pre>{{history | json}}</pre> -->
+  <div>Paciente: {{history.nombrePaciente}}</div>
+    <div>Doctor: {{history.nombreDoctor}}</div>
+    <div *ngFor="let log of history.log">
+      <div>Log: {{log}}</div>
+    </div>
+</div>

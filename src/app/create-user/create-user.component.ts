@@ -21,19 +21,11 @@ export class CreateUserComponent implements OnInit {
   constructor(private api: ApiServiceService, private router: Router) { }
   registro(): void {
 
-    if (this.api.registro(this.role, this.uid, this.name, this.surname, this.dni, this.username, this.pass)) {
-      this.role;
-      this.uid;
-      this.name;
-      this.surname;
-      this.dni;
-      this.username;
-      this.pass;
-      this.error = "";
-      this.router.navigate(['dashboard']);
-    } else {
-      this.error = ("Introduzca sus datos correctamente");
-    }
+
+    
+    this.api.registro(this.role, this.uid, this.name, this.surname, this.dni, this.username, this.pass)
+
+    this.router.navigate(['dashboard']);
 
   }
 

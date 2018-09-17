@@ -34,7 +34,7 @@ export class AllGuard implements CanActivate {
         }
 
       case 'patient':
-        if (paramUid === uid || (route === 'patient/:uid' || route === 'history/:uid')) {
+        if (paramUid === uid && (route === 'patient/:uid' || route === 'history/:uid')) {
           return true;
         } else {
           return false;
