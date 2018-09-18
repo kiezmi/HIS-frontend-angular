@@ -25,7 +25,6 @@ export class CreateUserComponent implements OnInit {
     this.router.navigate(['dashboard']);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

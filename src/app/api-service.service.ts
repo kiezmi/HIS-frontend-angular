@@ -20,7 +20,7 @@ export class ApiServiceService {
     { role: 'technical', uid: "001", name: "Javo", surname: "Guerra", dni: "123456789W", username: "Javo", password: "2" }
   ];
 
-  historiales: Array<History> =   [
+  historiales: Array<History> = [
     { id: '1', userId: "100", doctorId: "010", log: ["12/2/1999 Rotura de ligamento anterior"] },
     { id: '2', userId: "100", doctorId: "020", log: ["12/2/1978 Rotura de ligamento "] },
     { id: '3', userId: "200", doctorId: "020", log: ["12/2/2000 Rotura de ligamento anterior"] },
@@ -49,9 +49,7 @@ export class ApiServiceService {
 
   registro(role, uid, name, surname, dni, username, password) {
     this.users.push(
-      {
-        role , uid, name, surname, dni, username, password
-      }
+      { role, uid, name, surname, dni, username, password }
     );
     this.saveData();
   }
@@ -60,7 +58,7 @@ export class ApiServiceService {
     const patinentsArray = this.users.filter(pacientes => pacientes.role === 'patient');
     return patinentsArray;
   }
-  
+
   getPatient(id) {
     const paciente = this.users.find(pacientes => pacientes.uid === id);
     return paciente;
