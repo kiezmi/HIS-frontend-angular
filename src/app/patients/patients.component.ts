@@ -9,12 +9,11 @@ import { User } from '../models/user.interface';
 })
 export class PatientsComponent implements OnInit {
   patients: Array<User>;
-  
+
   constructor(private api: ApiServiceService) {
     this.patients = api.getPatients();
-   }
-
-  ngOnInit() {
   }
+
+  ngOnInit() { }
 
 }

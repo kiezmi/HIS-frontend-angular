@@ -60,6 +60,7 @@ export class ApiServiceService {
     const patinentsArray = this.users.filter(pacientes => pacientes.role === 'patient');
     return patinentsArray;
   }
+  
   getPatient(id) {
     const paciente = this.users.find(pacientes => pacientes.uid === id);
     return paciente;

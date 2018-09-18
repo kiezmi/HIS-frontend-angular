@@ -19,14 +19,10 @@ export class CreateUserComponent implements OnInit {
   error = "";
 
   constructor(private api: ApiServiceService, private router: Router) { }
+
   registro(): void {
-
-
-    
     this.api.registro(this.role, this.uid, this.name, this.surname, this.dni, this.username, this.pass)
-
     this.router.navigate(['dashboard']);
-
   }
 
   ngOnInit() {
