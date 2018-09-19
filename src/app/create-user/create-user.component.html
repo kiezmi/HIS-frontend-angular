@@ -29,15 +29,15 @@
         </li>
 
         <li>
-          <label class="label2" for="navegar">Que rol es usted</label>
+          <label class="label2" for="role" [(ngModel)]="role">Que rol es usted</label>
           <br />
           <br />
-          <select name="navegar" size="1">
+          <select name="role" size="1">
             <option value="1"></option>
-            <option value="2">Administrador</option>
-            <option value="3">Tecnico</option>
-            <option value="4">Medico</option>
-            <option value="5">Paciente</option>
+            <option value="admin">Administrador</option>
+            <option value="technical">Tecnico</option>
+            <option value="doctor">Medico</option>
+            <option value="patient">Paciente</option>
           </select>
         </li>
 
