@@ -50,7 +50,9 @@ export class ApiServiceService {
   registro(role, uid, name, surname, dni, username, password) {
     this.users.push(
       { role, uid, name, surname, dni, username, password }
+      
     );
+    console.log(this.users);
     this.saveData();
   }
 

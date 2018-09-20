@@ -10,10 +10,10 @@ import { Router } from '@angular/router';
 export class CreateUserComponent implements OnInit {
 
   role: string;
-  uid: number;
+  uid: string;
   name: string;
   surname: string;
-  dni: number;
+  dni: string;
   username: string;
   pass: string;
   error = "";
@@ -21,7 +21,6 @@ export class CreateUserComponent implements OnInit {
   constructor(private api: ApiServiceService, private router: Router) { }
 
   registro(): void {
-
     this.api.registro(this.role, this.uid, this.name, this.surname, this.dni, this.username, this.pass)
     this.router.navigate(['login']);
   }
