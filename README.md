@@ -27,7 +27,6 @@ Simular la interacción con un backend mediante un servicio fake (mock)
 
 - getPatients()   // doctor, admin
 - getPatient(uid) //  doctor, admin, patient
-- postPatient(patient) // technical
 
 - getMedicalHistories() // doctor, admin
 - getMedicalHistory(id)  // doctor, admin, patient
