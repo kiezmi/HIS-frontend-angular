@@ -1,6 +1,6 @@
-# HISFrontendAngular
+# HIS Frontend Angular
 
-Actividad didáctica consistente en la creación de un frontend con angular simulando una app de gestión hospitalaria
+Actividad didáctica consistente en la creación de un frontend con angular simulando una app de gestión hospitalaria.
 
 ## Objetivos
 
