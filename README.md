@@ -53,7 +53,7 @@ Simular la interacción con un backend mediante un servicio fake (mock)
     - /patient/:id  sólo puede ver su ficha
     - /history/:id  sólo puede ver su historial
 
-# Ejemplos para provar la aplicacion
+# Ejemplos para probar la aplicacion
 
 ## Admin
 - uid: "000", name: "Manolo", surname: "Fernandez", dni: "123456789K", username: "Manolo", password: "0"
