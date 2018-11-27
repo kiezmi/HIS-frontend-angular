@@ -1,4 +1,4 @@
-
+<div>
   <p>Introduzca su Usuario y Contraseña</p><br>
   <form (submit)="login()">
     <input type="text" name="user" placeholder="Usuario" [(ngModel)]="user">
@@ -6,4 +6,4 @@
     <button type="submit">Login</button>
     <div *ngIf="error">{{error}}</div>
   </form>
-
+</div>

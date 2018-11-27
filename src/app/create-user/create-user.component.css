@@ -41,7 +41,7 @@ body {
 /* === Form Header === */
 
 .contact_form h2 {
-    margin: 0;
+    margin: 1;
     display: inline;
 }
 

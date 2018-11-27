@@ -1,6 +1,14 @@
+html {
+  background: #e0f3fa;
+  background-image: url("/src/assets/fondo.jpg");
+  height:97vh;
+  
+}
+
 .fondo {
-  height: 100vh;
-  width: 100vw;
+  height:100vh;
+  width:100vw;
+  
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0f3fa+0,b6dffd+100 */
   background: #e0f3fa;
   /* Old browsers */
@@ -12,4 +20,5 @@
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0f3fa', endColorstr='#b6dffd', GradientType=0);
   /* IE6-9 */
+  background-image: url("/src/assets/fondo.jpg");
 }
