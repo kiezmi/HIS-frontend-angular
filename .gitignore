@@ -4,8 +4,6 @@
 /tmp
 /out-tsc
 
-# dependencies
-/node_modules
 
 # IDEs and editors
 /.idea
@@ -36,3 +34,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Readme de node_modules
+node_modules/**/README.md
+node_modules/**/**/README.md
+node_modules/**/**/**/README.md
