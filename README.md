@@ -1,6 +1,6 @@
 # HIS Frontend Angular
 
-Actividad didáctica consistente en la creación de un frontend con angular simulando una app de gestión hospitalaria.
+Actividad didáctica consistente en la creación de un frontend con angular y un mock simulando una app de gestión hospitalaria.
 
 ## Objetivos
 
@@ -52,4 +52,18 @@ Simular la interacción con un backend mediante un servicio fake (mock)
 - Privadas patient
     - /patient/:id  sólo puede ver su ficha
     - /history/:id  sólo puede ver su historial
+
+# Ejemplos para provar la aplicacion
+
+## Admin
+- uid: "000", name: "Manolo", surname: "Fernandez", dni: "123456789K", username: "Manolo", password: "0"
+
+## Tecnico
+- uid: "001", name: "Javi", surname: "Guerra", dni: "123456789N", username: "Javi", password: "1"
+
+## Doctor
+- uid: "010", name: "Cristian", surname: "Martinez", dni: "123456789M", username: "Cristian", password: "10"
+
+## Paciente
+- uid: "100", name: "Juan", surname: "Lopez", dni: "123456789J", username: "Juan", password: "100"
 
