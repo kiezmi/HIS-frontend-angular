@@ -1,9 +1,29 @@
-<div>
+<div class="targeta">
   <p>Introduzca su Usuario y Contraseña</p><br>
   <form (submit)="login()">
-    <input type="text" name="user" placeholder="Usuario" [(ngModel)]="user">
+    <input type="text" name="user" placeholder="Usuario" autofocus required [(ngModel)]="user">
     <input type="password" name="pass" placeholder="Contraseña" [(ngModel)]="pass">
     <button type="submit">Login</button>
     <div *ngIf="error">{{error}}</div>
   </form>
 </div>
+
+<div id="envoltura">
+  <div id="contenedor">
+
+      <div id="cabecera" >
+        <p>Introduzca su Usuario y Contraseña</p>
+      </div>
+
+      <div id="cuerpo">
+        <form (submit)="login()">
+          <input type="text" name="user" placeholder="Usuario" autofocus required [(ngModel)]="user">
+          <input type="password" name="pass" placeholder="Contraseña" [(ngModel)]="pass">
+          <button class="submit" type="submit">Login</button>
+          <div *ngIf="error">{{error}}</div>
+        </form>
+      </div><!--fin cuerpo-->
+
+      <div id="pie">Medical center(c) 2018 </div>
+  </div><!-- fin contenedor -->
+</div><!--fin envoltura-->

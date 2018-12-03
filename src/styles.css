@@ -6,7 +6,7 @@ html {
   /* 2 */
 
   background: #e0f3fa;
-  background-image: url("/src/assets/fondo.jpg");
+  background-image: url("/assets/fondo.jpg");
   height: 97vh;
 
 }
