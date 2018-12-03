@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    
     "build": "ng build --prod --output-path docs --base-href HIS-frontend-angular",
     "test": "ng test",
     "lint": "ng lint",
