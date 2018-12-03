@@ -1,13 +1,17 @@
-<p>
-  Su rol es {{miRole}}, por lo tanto puede acceder a:
-</p>
-
-<div>
-  <button *ngIf="miRole==='admin'|| miRole==='doctor'" routerLink="/histories">Lista Historiales</button><br>
-  <button *ngIf="miRole==='admin'|| miRole==='doctor'" routerLink="/patients">Lista Pacientes</button><br>
-  <button *ngIf="miRole==='admin' || miRole==='technical'" routerLink="/createUser">Nuevo Usuario</button><br>
-  <button *ngIf="miRole==='patient'" routerLink="/patient/{{miUid}}">Ficha</button><br>
-  <button *ngIf="miRole==='patient'" routerLink="/history/{{miUid}}">Historial Clinico</button><br>
+<div class="envoltura">
+  <div class="contenedor">
+    <div class="cabecera">
+      <p>Su rol es {{miRole}}, por lo tanto puede acceder a:</p>
+    </div>
+    <div class="cuerpo">
+      <button *ngIf="miRole==='admin'|| miRole==='doctor'" routerLink="/histories">Lista Historiales</button><br>
+      <button *ngIf="miRole==='admin'|| miRole==='doctor'" routerLink="/patients">Lista Pacientes</button><br>
+      <button *ngIf="miRole==='admin' || miRole==='technical'" routerLink="/createUser">Nuevo Usuario</button><br>
+      <button *ngIf="miRole==='patient'" routerLink="/patient/{{miUid}}">Ficha</button><br>
+      <button *ngIf="miRole==='patient'" routerLink="/history/{{miUid}}">Historial Clinico</button><br>
+    </div>
+    <div class="footer">
+    <button (click)="logout()">Desconectarse</button>
+    </div>
+  </div>
 </div>
-
-<button (click)="logout()">Desconectarse</button>

@@ -9,7 +9,7 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./patient.component.css"]
 })
 export class PatientComponent implements OnInit {
-  paciente: any;
+  paciente: any = {};
   constructor(private api: ApiServiceService, private route: ActivatedRoute) {
     route.params.subscribe(params => {
       let id = params.uid;
