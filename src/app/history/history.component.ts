@@ -16,7 +16,6 @@ export class HistoryComponent implements OnInit {
     /*   route.params.subscribe(params => {
         let id = params.uid
         this.histories = api.getHistoriesFromPatient(id);
-  
       }); */
     route.params.subscribe(params => {
       let id = params.uid
@@ -27,9 +26,5 @@ export class HistoryComponent implements OnInit {
       }))
     });
   }
-
-
-
   ngOnInit() { }
-
 }

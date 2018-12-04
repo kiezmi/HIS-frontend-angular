@@ -1,8 +1,12 @@
-<div *ngFor="let history of histories">
-  <!-- <pre>{{history | json}}</pre> -->
-  <div>Paciente: {{history.nombrePaciente}}</div>
-    <div>Doctor: {{history.nombreDoctor}}</div>
-    <div *ngFor="let log of history.log">
-      <div>Log: {{log}}</div>
-      <p></p>
-</div>
+<div class="envoltura">
+  <div class="contenedor">
+    <div class="cabecera">Historial de {{histories[0].nombrePaciente}}</div>
+    <div *ngFor="let history of histories">
+      <!-- <pre>{{history | json}}</pre> -->
+      <div>Doctor: {{history.nombreDoctor}}</div>
+      <div *ngFor="let log of history.log">
+        <div>Log: {{log}}</div>
+       <br />
+      </div>
+    </div>
+  </div>

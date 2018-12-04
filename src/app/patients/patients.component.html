@@ -1,9 +1,17 @@
-<div *ngFor="let patient of patients" routerLink="/patient/{{patient.uid}}">
-  <!-- <pre>{{patient.name}} {{patient.surname}} {{patient.dni}} </pre> -->
-  <div>
-    <p> Nombre:{{patient.name}}</p>
-    <p> Apellidos:{{patient.surname}}</p>
-    <p> DNI:{{patient.dni}}</p>
-  </div>>
-
+<div class="envoltura">
+  <div class="contenedor">
+    <div class="cabecera">Listado de Pacientes</div>
+    <div *ngFor="let patient of patients" routerLink="/patient/{{patient.uid}}">
+      <!-- <pre>{{patient.name}} {{patient.surname}} {{patient.dni}} </pre> -->
+      <div>
+        <p> Nombre:{{patient.name}}</p>
+        <p> Apellidos:{{patient.surname}}</p>
+        <p> DNI:{{patient.dni}}</p>
+        <br />
+      </div>
+    </div>
+    <div class="footer">
+      <button routerLink="/dashboard">Inicio</button>
+    </div>
+  </div>
 </div>
