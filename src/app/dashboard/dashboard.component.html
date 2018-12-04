@@ -11,7 +11,8 @@
       <button *ngIf="miRole==='patient'" routerLink="/history/{{miUid}}">Historial Clinico</button><br>
     </div>
     <div class="footer">
-    <button (click)="logout()">Desconectarse</button>
+      <button routerLink="/dashboard">Inicio</button>
+      <button (click)="logout()">Desconectarse</button>
     </div>
   </div>
 </div>

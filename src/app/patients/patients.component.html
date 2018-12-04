@@ -1,7 +1,7 @@
 <div class="envoltura">
   <div class="contenedor">
     <div class="cabecera">Listado de Pacientes</div>
-    <div *ngFor="let patient of patients" routerLink="/patient/{{patient.uid}}">
+    <div class="cuerpo" *ngFor="let patient of patients" routerLink="/patient/{{patient.uid}}">
       <!-- <pre>{{patient.name}} {{patient.surname}} {{patient.dni}} </pre> -->
       <div>
         <p> Nombre:{{patient.name}}</p>
@@ -11,6 +11,7 @@
       </div>
     </div>
     <div class="footer">
+      <button routerLink="/dashboard">Atras</button>
       <button routerLink="/dashboard">Inicio</button>
     </div>
   </div>
