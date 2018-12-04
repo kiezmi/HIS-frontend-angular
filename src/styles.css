@@ -178,6 +178,15 @@ textarea {
   /* 2 */
 }
 
+button {
+  text-align: center;
+}
+
+button.submit:hover {
+  opacity: .85;
+  cursor: pointer;
+}
+
 /**
    * Show the overflow in IE.
    * 1. Show the overflow in Edge.
@@ -385,9 +394,9 @@ template {
 .cabecera {
   /*linea azul que separa logo*/
   border-bottom: 5px solid #333;
-  padding-top: 5px;
+  padding-top: 3px;
   /*color:#FFF;*/
-  height: 70px;
+  height: 60px;
   line-height: 50px;
   text-align: center;
 }

@@ -3,10 +3,9 @@
     <form class="contact_form" action="#" id="contact_form" runat="server" (submit)="registro()">
       <div>
         <ul>
-          <li>
-            <span class="required_notification">* Datos requeridos</span>
-            <p></p>
-          </li>
+          <div class="cabecera">
+            <span>Introduzca sus datos *<span class="required_notification">Requerido</span></span>
+          </div>
           <li>
             <label class="label3" for="role">¿Que rol de usuario desea crear?</label>
             <select name="role" size="1" [(ngModel)]="role" required>
@@ -43,18 +42,18 @@
             <input type="password" name="pass" placeholder="Contraseña" [(ngModel)]="pass" required />
           </li>
           <li>
-            <input class="input2" type="checkbox" name="1" value="primer_checkbox" required>
+            <input class="input2" type="checkbox" name="cbox1" value="primer_checkbox">
             <label class="label4" for="cbox1">*Acepto los términos y las condiciones de privacidad </label>
+            <label class="label4">Al enviar este formulario, usted acepta nuestra <a href="#">politica de privacidad</a></label>
             <br />
             <br />
-            <label class="label4">Al enviar este formulario, usted acepta nuestra <ins>politica de privacidad</ins></label>
-          </li>
-          <li>
             <button class="submit" type="submit">Registrarse</button>
           </li>
           <div *ngIf="error">{{error}}</div>
         </ul>
-        <span>Powered by Enrique de Miguel Quinzá (C)2018</span>
+        <div class="footer">
+          <span>Powered by Enrique de Miguel Quinzá (C)2018</span>
+        </div>
       </div>
     </form>
   </div>

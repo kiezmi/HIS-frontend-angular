@@ -14,30 +14,7 @@ input {
 }
 
 button.submit {
-    background-color: #14a7a7;
-    background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
-    background: -webkit-linear-gradient(top, #14a7a7, #50911e);
-    background: -moz-linear-gradient(top, #14a7a7, #50911e);
-    background: -ms-linear-gradient(top, #14a7a7, #50911e);
-    background: -o-linear-gradient(top, #14a7a7, #50911e);
-    border: 1px solid #14a7a7;
-    border-bottom: 1px solid #14a7a7;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    box-shadow: inset 0 1px 0 0 #14a7a7;
-    -webkit-box-shadow: 0 1px 0 0 #14a7a7 inset;
-    -moz-box-shadow: 0 1px 0 0 #14a7a7 inset;
-    -ms-box-shadow: 0 1px 0 0 #14a7a7 inset;
-    -o-box-shadow: 0 1px 0 0 #14a7a7 inset;
-    color: white;
-    font-weight: bold;
-    padding: 6px 20px;
-    text-align: center;
-    text-shadow: 0 -1px 0 #14a7a7;
-    margin-left: 150px;
+    margin-left: 140px; 
 }
 
 button.submit:hover {
@@ -45,14 +22,14 @@ button.submit:hover {
     cursor: pointer;
 }
 
-button.submit:active {
+/* button.submit:active {
     border: 1px solid #20911e;
     box-shadow: 0 0 10px 5px #356b0b inset;
     -webkit-box-shadow: 0 0 10px 5px #356b0b inset;
     -moz-box-shadow: 0 0 10px 5px #356b0b inset;
     -ms-box-shadow: 0 0 10px 5px #356b0b inset;
     -o-box-shadow: 0 0 10px 5px #356b0b inset;
-}
+} */
 
 form,
 p {

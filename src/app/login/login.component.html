@@ -3,7 +3,6 @@
       <div class="cabecera" >
         <p>Login</p>
       </div>
-
       <div class="cuerpo">
         <form (submit)="login()">
           <input type="text" name="user" placeholder="Usuario" autofocus required [(ngModel)]="user">
@@ -12,7 +11,6 @@
           <div *ngIf="error">{{error}}</div>
         </form>
       </div><!--fin cuerpo-->
-
-      <div class="pie"> Medical center &#169; 2018 </div>
+      <div class="footer"> Medical center &#169; 2018 </div>
   </div><!-- fin contenedor -->
 </div><!--fin envoltura-->
