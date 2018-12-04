@@ -37,6 +37,7 @@ button.submit {
     padding: 6px 20px;
     text-align: center;
     text-shadow: 0 -1px 0 #14a7a7;
+    margin-left: 150px;
 }
 
 button.submit:hover {

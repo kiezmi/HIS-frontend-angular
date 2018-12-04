@@ -25,32 +25,32 @@ const routes: Routes = [
     {
         path: 'dashboard',
         component: DashboardComponent,
-        canActivate: [AuthGuard],
+        // canActivate: [AuthGuard],
     },
     {
         path: 'patients',
         component: PatientsComponent,
-        canActivate: [AllGuard],
+        // canActivate: [AllGuard],
     },
     {
         path: 'patient/:uid',
         component: PatientComponent,
-        canActivate: [AllGuard],
+        // canActivate: [AllGuard],
     },
     {
         path: 'histories',
         component: HistoriesComponent,
-        canActivate: [AllGuard],
+        // canActivate: [AllGuard],
     },
     {
         path: 'history/:uid',
         component: HistoryComponent,
-        canActivate: [AllGuard],
+        // canActivate: [AllGuard],
     },
     {
         path: 'createUser',
         component: CreateUserComponent,
-        canActivate: [AllGuard],
+        // canActivate: [AllGuard],
     },
     {
         path: '**',

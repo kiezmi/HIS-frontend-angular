@@ -272,18 +272,14 @@ progress {
   vertical-align: baseline;
 }
 
-/**
-   * Remove the default vertical scrollbar in IE 10+.
-   */
+/*Remove the default vertical scrollbar in IE 10+.*/
 
 textarea {
   overflow: auto;
 }
 
-/**
-   * 1. Add the correct box sizing in IE 10.
-   * 2. Remove the padding in IE 10.
-   */
+/** 1. Add the correct box sizing in IE 10.
+  * 2. Remove the padding in IE 10.*/
 
 [type="checkbox"],
 [type="radio"] {
@@ -293,17 +289,14 @@ textarea {
   /* 2 */
 }
 
-/**
-   * Correct the cursor style of increment and decrement buttons in Chrome.
-   */
+/* Correct the cursor style of increment and decrement buttons in Chrome. */
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/**
-   * 1. Correct the odd appearance in Chrome and Safari.
+/* * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
 
@@ -314,9 +307,7 @@ textarea {
   /* 2 */
 }
 
-/**
-   * Remove the inner padding in Chrome and Safari on macOS.
-   */
+/* Remove the inner padding in Chrome and Safari on macOS.*/
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -356,31 +347,27 @@ summary {
 /* Misc
      ========================================================================== */
 
-/**
-   * Add the correct display in IE 10+.
-   */
+/*** Add the correct display in IE 10+.*/
 
 template {
   display: none;
 }
 
-/**
-   * Add the correct display in IE 10.
-   */
+/*** Add the correct display in IE 10.*/
 
 [hidden] {
   display: none;
 }
 
-/* Targetas========================================================================== */
+/*====================================Targetas====================================== */
 
 .envoltura {
   position: absolute;
   /*left y top al 50% para que quede centrado en la pantalla*/
   left: 50%;
   top: 50%;
-  margin-left: -165px;
-  margin-top: -210px;
+  margin-left: -160px;
+  margin-top: -200px;
   width: 330px;
 }
 
@@ -394,6 +381,7 @@ template {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
+
 .cabecera {
   /*linea azul que separa logo*/
   border-bottom: 5px solid #333;
@@ -411,6 +399,7 @@ template {
   border-width: 2px 0;
   padding: 15px 35px;
 }
+
 .footer {
   border-top: 5px solid #333;
   color: #fff;
