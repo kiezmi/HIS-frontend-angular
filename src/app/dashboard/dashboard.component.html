@@ -1,7 +1,7 @@
 <div class="envoltura">
   <div class="contenedor">
     <div class="cabecera">
-      <p>Su rol es {{miRole}}, por lo tanto puede acceder a:</p>
+      <p>Su rol es {{miRole}}, que desea hacer:</p>
     </div>
     <div class="cuerpo">
       <button *ngIf="miRole==='admin'|| miRole==='doctor'" routerLink="/histories">Lista Historiales</button><br>

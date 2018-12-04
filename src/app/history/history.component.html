@@ -1,7 +1,7 @@
 <div class="envoltura">
   <div class="contenedor">
-    <div class="cabecera">Historial de {{histories[0].nombrePaciente}}</div>
-    <div *ngFor="let history of histories">
+    <div class="cabecera">Historial de {{histories[0]?.nombrePaciente}}</div>
+    <div class="cuerpo" *ngFor="let history of histories">
       <!-- <pre>{{history | json}}</pre> -->
       <div>Doctor: {{history.nombreDoctor}}</div>
       <div *ngFor="let log of history.log">

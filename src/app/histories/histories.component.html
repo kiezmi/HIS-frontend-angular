@@ -1,7 +1,7 @@
 <div class="envoltura">
   <div class="contenedor">
     <div class="cabecera">Listado de Historias</div>
-    <div *ngFor="let history of histories" routerLink="/history/{{history.userId}}">
+    <div class="cuerpo" *ngFor="let history of histories" routerLink="/history/{{history.userId}}">
       <!-- <pre>{{history | json}}</pre> -->
       <div>Paciente: {{history.nombrePaciente}}</div>
       <div>Doctor: {{history.nombreDoctor}}</div>
