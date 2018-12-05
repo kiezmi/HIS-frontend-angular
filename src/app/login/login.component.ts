@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
         } else {
             this.error = ("Introduzca su usuario y contraseña correctamente");
         }
-
     }
 
     ngOnInit() { }
